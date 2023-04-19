@@ -13,4 +13,4 @@ Chrome extension to change the default GPT model version of ChatGPT.
 4. Choose `Load unpacked` then select clone folder
 
 ## Install from the Chrome Extension store
-TBD
+[Chrome Web Store listing](https://chrome.google.com/webstore/detail/chatgpt-default-model-sel/ccibigimpkglmjnohebpnddlikojfedf)
