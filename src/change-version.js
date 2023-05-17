@@ -13,10 +13,15 @@ const updateDefaultGPTVersion = async () => {
   const currentURL = new URL(window.location.href);
 
   // Check if current URL's domain matches the target domain
-  if (currentURL.hostname === targetDomain && !currentURL.pathname.startsWith('/c/')) {
-    const defaultVersion = await getDefaultGPTVersion();
+  if (currentURL.hostname === targetDomain) {
+    // Skip chat history
+    if (currentURL.pathname.startsWith('/c/')) {
+      return;
+    }
 
-    if (currentURL.searchParams.get('model') ===  defaultVersion) {
+    // Skip pages that already use the default model version
+    const defaultVersion = await getDefaultGPTVersion();
+    if (currentURL.searchParams.get('model').includes(defaultVersion)) {
       return;
     }
 
