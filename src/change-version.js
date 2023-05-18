@@ -21,7 +21,7 @@ const updateDefaultGPTVersion = async () => {
 
     // Skip pages that already use the default model version
     const defaultVersion = await getDefaultGPTVersion();
-    if (currentURL.searchParams.get('model').includes(defaultVersion)) {
+    if ((currentURL.searchParams.get('model') || '').includes(defaultVersion)) {
       return;
     }
 
