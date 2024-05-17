@@ -9,11 +9,11 @@ const getDefaultGPTVersion = async () => {
 }
 
 const updateDefaultGPTVersion = async () => {
-  const targetDomain = 'chat.openai.com';
+  const targetDomains ['chatgpt.com', 'chat.openai.com'];
   const currentURL = new URL(window.location.href);
 
   // Check if current URL's domain matches the target domain
-  if (currentURL.hostname === targetDomain) {
+  if (targetDomains.includes(currentURL.hostname)) {
     // Skip chat history
     if (currentURL.pathname.startsWith('/c/')) {
       return;
