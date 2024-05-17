@@ -1,7 +1,7 @@
 const getDefaultGPTVersion = async () => {
   return new Promise((resolve) => {
     chrome.storage.sync.get('gpt_version', (data) => {
-      const defaultVersion = data['gpt_version'] || 'gpt-4';
+      const defaultVersion = data['gpt_version'] || 'gpt-4o';
 
       resolve(defaultVersion);
     });
