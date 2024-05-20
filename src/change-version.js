@@ -9,7 +9,7 @@ const getDefaultGPTVersion = async () => {
 }
 
 const updateDefaultGPTVersion = async () => {
-  const targetDomains ['chatgpt.com', 'chat.openai.com'];
+  const targetDomains = ['chatgpt.com', 'chat.openai.com'];
   const currentURL = new URL(window.location.href);
 
   // Check if current URL's domain matches the target domain
